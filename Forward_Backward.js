@@ -8,6 +8,13 @@ const handleKeyDown = (event) => {
     } else if (event.keyCode === 37) { // Left arrow key (backward)
         video.currentTime -= skipTime; // Rewind by 10 seconds
     }
+    else if (event.keyCode === 32) {
+        if(video.play){
+            video.pause()
+        }
+        else if(video.pause){
+            video.play()
+    }
 };
 
 // Attach the event handler
